@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Draggable
+<<<<<<< Updated upstream
   - Combine
+=======
+  - Item
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
