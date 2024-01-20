@@ -43,6 +43,7 @@ public class Draggable : MonoBehaviour
         // Set the size of the BoxCollider2D based on the sprite's bounds
         boxCollider.size = spriteRenderer.bounds.size;
         rigidbody2D.gravityScale = 0;
+        rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         newAsset.tag = "Combine";
 
         // Set the position of the new asset
