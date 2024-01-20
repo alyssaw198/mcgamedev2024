@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 515728125ef3c244ebf8fff698b4c0a6
+  - enabled: 1
+    path: Assets/Scenes/Alyssa's Scene.unity
+    guid: f9fdeb0635ab09b469abf7ffc1ed4cf4
   m_configObjects: {}
