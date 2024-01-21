@@ -15,4 +15,19 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Player Quit Game");
     }
+
+    public void Next()
+    {
+        SceneManager.LoadScene("Home");
+    }
+
+    public void Lore2()
+    {
+        SceneManager.LoadScene("Lore 1");
+    }
+
+    public void Lore()
+    {
+        SceneManager.LoadScene("Lore");
+    }
 }
