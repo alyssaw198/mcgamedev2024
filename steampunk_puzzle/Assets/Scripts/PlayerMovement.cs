@@ -9,19 +9,23 @@ public class NewBehaviourScript : MonoBehaviour
     public Rigidbody2D rb;
     private Vector2 moveDirection;
     public Animator animator;
+    public Vector3 initialPosition = new Vector3(0f, 0f, 0f);
 
 
     private float minX, maxX, minY, maxY;
 
+    
     void Start()
     {
+        transform.position = initialPosition;
         // Define screen boundaries in world coordinates
+       
         minX = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
         maxX = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
         minY = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.26f, 0)).y;
-        maxY = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
+        maxY = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.7f, 0)).y;
+        
     }
-
     // Update is called once per frame
     void Update()
     {

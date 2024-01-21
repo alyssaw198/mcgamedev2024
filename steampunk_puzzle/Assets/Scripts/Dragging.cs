@@ -54,12 +54,12 @@ public class Dragging : MonoBehaviour
 
             // Instantiate a new asset or perform any other logic
             // Load the prefab from the Resources folder
-            GameObject prefab = Resources.Load<GameObject>("Prefabs/Fire");
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/ONE");
             // Instantiate the prefab
             GameObject newAsset = Instantiate(prefab, collisionPoint, Quaternion.identity);
-            newAsset.tag = "Fire";
+            newAsset.tag = "ONE";
         }
-        if (collision.gameObject.CompareTag("Wires") && gameObject.CompareTag("Clock"))
+        if (collision.gameObject.CompareTag("ONE") && gameObject.CompareTag("Helmet"))
         {
             Vector2 collisionPoint = collision.contacts[0].point;
             Destroy(gameObject);
@@ -67,10 +67,66 @@ public class Dragging : MonoBehaviour
 
             // Instantiate a new asset or perform any other logic
             // Load the prefab from the Resources folder
-            GameObject prefab = Resources.Load<GameObject>("Prefabs/Time");
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/TWO");
             // Instantiate the prefab
             GameObject newAsset = Instantiate(prefab, collisionPoint, Quaternion.identity);
-            newAsset.tag = "Time";
+            newAsset.tag = "TWO";
+        }
+        if (collision.gameObject.CompareTag("TWO") && gameObject.CompareTag("Kettle"))
+        {
+            Vector2 collisionPoint = collision.contacts[0].point;
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+
+            // Instantiate a new asset or perform any other logic
+            // Load the prefab from the Resources folder
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/THREE");
+            // Instantiate the prefab
+            GameObject newAsset = Instantiate(prefab, collisionPoint, Quaternion.identity);
+            newAsset.tag = "THREE";
+        }
+        if (collision.gameObject.CompareTag("THREE") && gameObject.CompareTag("Gears"))
+        {
+            Vector2 collisionPoint = collision.contacts[0].point;
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+
+            // Instantiate a new asset or perform any other logic
+            // Load the prefab from the Resources folder
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/FOUR");
+            // Instantiate the prefab
+            GameObject newAsset = Instantiate(prefab, collisionPoint, Quaternion.identity);
+            newAsset.tag = "FOUR";
+        }
+        if (collision.gameObject.CompareTag("FOUR") && gameObject.CompareTag("Clock"))
+        {
+            Vector2 collisionPoint = collision.contacts[0].point;
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+
+            // Instantiate a new asset or perform any other logic
+            // Load the prefab from the Resources folder
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/FIVE");
+            // Instantiate the prefab
+            GameObject newAsset = Instantiate(prefab, collisionPoint, Quaternion.identity);
+            newAsset.tag = "FIVE";
+        }
+        if (collision.gameObject.CompareTag("FIVE") && gameObject.CompareTag("Switch"))
+        {
+            Vector2 collisionPoint = collision.contacts[0].point;
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+
+            // Get the center of the screen in world coordinates
+            Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
+            Vector2 worldCenter = Camera.main.ScreenToWorldPoint(screenCenter);
+
+            // Load the prefab from the Resources folder
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/SIX");
+
+            // Instantiate the prefab at the center of the screen
+            GameObject newAsset = Instantiate(prefab, worldCenter, Quaternion.identity);
+            newAsset.tag = "SIX";
         }
     }
 }

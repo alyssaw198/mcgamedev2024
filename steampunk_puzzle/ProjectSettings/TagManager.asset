@@ -16,15 +16,24 @@ TagManager:
   - Switch
   - Clock
   - Time
+  - Kettle
+  - Gears
+  - Helmet
+  - ONE
+  - TWO
+  - THREE
+  - FOUR
+  - FIVE
+  - SIX
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Objects
+  - Background
   - 
   - 
   - 

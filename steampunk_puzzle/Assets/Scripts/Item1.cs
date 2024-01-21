@@ -8,6 +8,7 @@ public class ClickToTeleport : MonoBehaviour
     public float touchCooldown = 0.5f;
 
     private float lastTouchTime;
+    public int newLayer = 6;
 
     private void Update()
     {
@@ -19,6 +20,7 @@ public class ClickToTeleport : MonoBehaviour
             {
                 Debug.Log("Teleporting item!");
                 TeleportToTargetPosition();
+                gameObject.layer = newLayer;
             }
         }
     }
