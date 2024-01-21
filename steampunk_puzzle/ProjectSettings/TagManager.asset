@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Draggable
+  - Combine
+  - Item
+  - Banana1
+  - Banana2
+  - Fire
+  - Elastic
+  - Lighter
+  - Wires
+  - Switch
+  - Clock
+  - Time
   layers:
   - Default
   - TransparentFX
